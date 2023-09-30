@@ -1,0 +1,37 @@
+.section{
+    padding-top: 50px;
+    min-height: 1000px;
+    background-size: cover;
+    background-position: center center;
+
+
+
+    
+    
+}
+.s1{
+    background-image: url("../img/background3.jpg");
+    margin-top: 50px;
+}
+.s2{
+    background-image: url("../img/background2.jpg");
+}
+#profilepic{
+    width: 500px;
+    border-radius: 50%;
+    border: 10px solid #ffa525;
+}
+.s1col{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+#stackpic{
+    margin-top: 150px;
+    width: 300px;
+    
+}
+#stackpic{
+    margin-bottom: 60px;
+}

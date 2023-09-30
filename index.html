@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="/img/plane.png">
 </head>
 <body>
-    <div class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
             <div class="container">
                 <a href="#" class="navbar-brand">ENRICO BERGAMINI</a>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
@@ -27,6 +27,39 @@
  
         </div>
     </div>
+    <div class="container-fluid section s1"  >
+        <div class="row">
+            <div class="col s1col" >
+                <img src="" alt="" id="stackpic">
+                <h1 class="text-light">MY STACK</h1>
+            </div>
+            <div class="col s1col" >
+                <img src="img/EB_edited.jpg" alt="" id="profilepic">
+                <h1 class="text-light">BACKEND DEVELOPER</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid section s2"  >
+        
+    </div>
+    <script>
+        
+                    
+
+                    
+                    const imageElement = document.getElementById('stackpic');
+                    let currentIndex = 1;                
+                    const interval = setInterval(()=>{
+                        
+                        imageElement.src = `img/stack${currentIndex}.png`;
+                        currentIndex+=1; 
+                        if (currentIndex>=10) currentIndex=1;
+                        
+                    }, 1000);
+
+                   
+
+    </script>
     <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>
