@@ -1,6 +1,6 @@
 .section{
-    padding-top: 50px;
-    min-height: 1000px;
+    padding-top: 80px;
+    min-height: 100vh;
     background-size: cover;
     background-position: center center;
 
@@ -11,7 +11,7 @@
 }
 .s1{
     background-image: url("../img/background3.jpg");
-    margin-top: 50px;
+    
 }
 .s2{
     background-image: url("../img/background2.jpg");
@@ -21,11 +21,17 @@
     border-radius: 50%;
     border: 10px solid #ffa525;
 }
+#profilepic:hover{
+    border: 10px solid #f5761b;
+    scale: 1.04;
+
+}
 .s1col{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-bottom: 100px;
+    margin-top: 50px;
 }
 #stackpic{
     margin-top: 150px;
@@ -34,4 +40,14 @@
 }
 #stackpic{
     margin-bottom: 60px;
+}
+.footercontainer{
+    line-height: 50px;
+    padding: 25px;
+}
+
+.linkimg{
+     width: 30px;
+     margin-right:15px;
+     margin-left: 15px;
 }
