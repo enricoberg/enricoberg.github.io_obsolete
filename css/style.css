@@ -1,3 +1,23 @@
+#profilepic{
+    width: 500px;
+    border-radius: 50%;
+    border: 10px solid #ffa525;
+}
+@media screen and (max-width: 864px) {
+    #profilepic{
+        
+        width: 350px;
+        margin-bottom: 50px;
+    }
+  }
+  @media screen and (min-width: 715px) and (max-width: 864px) {
+    #profilepic{
+        
+        margin-top:110px;
+        margin-bottom: 50px;
+    }
+  }
+
 .fullscreenheight{
     min-height: 100vh;
 }
@@ -19,11 +39,7 @@
 .s3{
     background-image: url("../img/background3.jpg");
 }
-#profilepic{
-    width: 500px;
-    border-radius: 50%;
-    border: 10px solid #ffa525;
-}
+
 #profilepic:hover{
     border: 10px solid #f5761b;
     scale: 1.04;
@@ -37,9 +53,9 @@
     margin-top: 50px;
 }
 #stackpic{
-    margin-top: 150px;
+    margin-top: 125px;
     width: 300px;
-    margin-bottom: 60px;
+    margin-bottom: 85px;
 }
 
 .footercontainer{
@@ -60,4 +76,8 @@
     flex-direction: column;
     justify-content: center;
 
+}
+.carousel-item img{
+    max-width: 80vw;
+    max-height: 80vh;
 }
