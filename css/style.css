@@ -9,12 +9,15 @@
         width: 350px;
         margin-bottom: 50px;
     }
+    #carouselExampleCaptions{
+        margin-top:150px;
+    }
   }
   @media screen and (min-width: 715px) and (max-width: 864px) {
     #profilepic{
         
         margin-top:110px;
-        margin-bottom: 50px;
+        
     }
   }
 
