@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrico Bergamini | My Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/plane.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+            <div class="container">
+                <a href="index.html" class="navbar-brand">ENRICO BERGAMINI</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Expand Navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>  
+                <div class="collapse navbar-collapse" id="nav">
+                    <div class="spacer mx-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"> <a href="index.html#section1" class="nav-link">Home</a></li>
+                        <li class="nav-item"> <a href="index.html#section2" class="nav-link">Bio</a></li>
+                        <li class="nav-item"> <a href="index.html#section3" class="nav-link">Portfolio</a></li>
+                        <li class="nav-item"> <a href="#" class="nav-link">Get in touch</a></li>
+                </ul>
+            </div>
+ 
+        </div>
+    </div>
+
+    <div class="container-fluid section  fullscreenheight"  >
+      <div class="row  h-100" >
+          <div class="col-11 col-md-8 mx-auto mx-auto text-light  " >
+              <form  novalidate id="form">
+                <h1 class="text-center">COMPILA IL FORM PER CONTATTARMI</h1>
+                <div class="form-floating margin30">
+                  <input type="text" name="username" id="username" class="form-control" placeholder="Place email here" required>
+                  <label for="username">Nome e Cognome</label>
+                  <div class="invalid-feedback">Nome non consentito</div>
+                  
+
+                </div>
+                <div class="form-floating margin30">
+                  <input type="email"name="email" id="email" class="form-control" placeholder="Place email here" required>
+                  <label for="email">Email</label>
+                  <div class="invalid-feedback">Indirizzo mail non consentito</div>
+                  
+
+                </div>
+                <div class="form-floating margin30 " >
+                  <textarea type="text" id="message" name="message" class="form-control msgbox "  placeholder="Place email here" required style="min-height: 300px;"></textarea>
+                  <label for="message ">Il tuo messaggio</label>
+                  <div class="invalid-feedback">Messaggio non valido</div>
+                  
+
+                </div>
+                <div class="downloadcontainer margin30">
+                  <button  id="downloadbutton">INVIA</button>
+                </div>
+                
+              </form>
+          </div>
+      </div>
+  </div>
+
+    <div class="container-fluid footercontainer bg-dark text-light">
+        <div class="row " >
+            <div class="col mx-auto text-center ">
+               Enrico Bergamini <br>
+               Back-end Developer <br>
+               Visit also my profile on: <br>
+               <a href="https://linkedin.com/in/enrico-bergamini" target="_blank"  ><img src="img/linkedin.png" alt="linkedin logo" class="linkimg"></a>
+               <a href="https://github.com/enricoberg" target="_blank" ><img src="img/stack9.png" alt="github logo" class="linkimg"></a>
+               <a href="https://talent.start2impact.it/profile/Enrico-Bergamini-1fd556eb-9ae1-41d1-b110-4c7a35c97584" target="_blank" ><img src="img/s2i.png" alt="start2impact logo" class="linkimg"></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('fImHDY0dLx--mOF3X')
+  </script>
+    <script type="text/javascript">
+        const btn = document.getElementById('downloadbutton');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_lxkx4em';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+    </script>
+    <script>
+        
+                    
+
+                    
+                    const form=document.querySelector("form")
+                    form.addEventListener('submit', e=>{
+                      if (!form.checkValidity()) {
+                        e.preventDefault()
+                      }
+                      form.classList.add('was-validated')
+                    })
+
+                   
+
+    </script>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
