@@ -32,17 +32,27 @@
    
     
 }
-.s1{
-    background-image: url("../img/background3.jpg");
+body{
+    background-image: url("../img/background4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#downloadbutton{
+    background-color: #f5761b;
+    color:white;
+    margin: 25px;
     
+    min-width: 200px;
 }
-.s2{
-    background-image: url("../img/background2.jpg");
+#downloadbutton:hover{
+    background-color: #ffa525;
 }
-.s3{
-    background-image: url("../img/background3.jpg");
+.downloadcontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-
 #profilepic:hover{
     border: 10px solid #f5761b;
     scale: 1.04;
