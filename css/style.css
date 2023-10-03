@@ -1,7 +1,9 @@
 #profilepic{
-    width: 500px;
+    width: 400px;
     border-radius: 50%;
     border: 10px solid #ffa525;
+    margin-top: 80px;
+    margin-bottom:30px;
 }
 @media screen and (max-width: 864px) {
     #profilepic{
