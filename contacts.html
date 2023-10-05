@@ -94,9 +94,23 @@ document.getElementById('form')
 
    const serviceID = 'default_service';
    const templateID = 'template_lxkx4em';
+   setTimeout(() => {
+    
+   
    if (document.querySelector('#form').classList.contains('was-validated')) {
-    setTimeout(() => {
-      emailjs.sendForm(serviceID, templateID, this)
+    
+
+
+    let allElementsHidden = true;
+document.querySelectorAll(".invalid-feedback").forEach(function(element) {
+  var computedStyle = window.getComputedStyle(element);
+  if (computedStyle.getPropertyValue("display") !== "none") {
+    allElementsHidden = false;
+    return;
+  }
+});
+if (allElementsHidden) {
+  emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       
       alert('Messaggio inviato con successo!');
@@ -105,11 +119,23 @@ document.getElementById('form')
       
       alert("Errore nell'invio");
     });
-    }, 1000);
+} 
+
+
+      
+    
     
         }
-   
+      }, 500);
 });
+
+
+
+
+
+
+
+
     </script>
     <script>
         
