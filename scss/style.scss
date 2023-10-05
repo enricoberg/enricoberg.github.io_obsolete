@@ -2,23 +2,7 @@ $base-orange:#f5761b;
 $light-orange:#ffa525;
 $site-grey: #9b9b9b;
 
-@media screen and (max-width: 864px) {
-    #profilepic{
-        
-        width: 300px;
-        margin-bottom: 50px;
-    }
-    #carouselExampleCaptions{
-        margin-top:150px;
-    }
-  }
-  @media screen and (min-width: 715px) and (max-width: 864px) {
-    #profilepic{
-        
-        margin-top:110px;
-        
-    }
-  }
+
 
 #profilepic{
     width: 400px;
@@ -111,3 +95,25 @@ body{
 label{
     color: $site-grey;
 }
+
+@media screen and (max-width: 864px) {
+    #profilepic{
+        
+        width: 300px;
+        margin-bottom: 50px;
+    }
+    #carouselExampleCaptions{
+        margin-top:150px;
+    }
+  }
+  @media screen and (min-width: 665px) and (max-width: 864px) {
+    #profilepic{
+        
+        margin-top:140px;
+        margin-bottom: 70px;
+        
+    }
+    h1{
+        font-size: 28px;
+    }
+  }
