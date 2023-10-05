@@ -91,6 +91,10 @@ label {
   color: #9b9b9b;
 }
 
+h5 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 @media screen and (max-width: 864px) {
   #profilepic {
     width: 300px;
