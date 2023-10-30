@@ -7,7 +7,7 @@
     <title>Enrico Bergamini | My Portfolio</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="img/plane.png?">
+    <link rel="icon" type="image/x-icon" href="img/plane.webp?">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -33,14 +33,36 @@
         <div class="row">
             <div class="col s1col" >
                 <img src="" alt="" id="stackpic">
-                <h1 class="text-light">IL MIO STACK</h1>
+                <h1 class="text-light" id="myStack">IL MIO STACK</h1>
             </div>
             <div class="col s1col" >
-                <img src="img/EB_edited.jpg" alt="profile picture" id="profilepic">
+                <img src="img/EB_edited.webp" alt="profile picture" id="profilepic">
                 <h1 class="text-light">BACKEND DEVELOPER</h1>
             </div>
         </div>
     </div>
+
+    <script>
+        
+                    
+
+                    
+      const imageElement = document.getElementById('stackpic');
+      let currentIndex = 1;                
+      const interval = setInterval(()=>{
+          
+          imageElement.src = `img/stack${currentIndex}.webp`;
+          currentIndex+=1; 
+          if (currentIndex>11) currentIndex=1;
+          
+      }, 1200);
+      
+
+     
+
+</script>
+
+
     <div class="container-fluid section s2 fullscreenheight" id="section2" >
         <div class="row  h-100" >
             <div class="col-11 col-md-8 mx-auto mx-auto text-light  " id="biobox">
@@ -66,41 +88,10 @@
 
                 <div id="carouselExampleCaptions" class="carousel slide carousel-dark">
                     <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                     
                     </div>
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="img/pizza.gif" class="d-block w-100 mx-auto" alt="preview of pizza manager project">
-                        <div class="carousel-caption d-none d-md-block text-dark">
-                          <h5><a href="https://github.com/enricoberg/Pizza-manager" target="_blank">PIZZA MANAGER</a></h5>
-                          <p>Gestionale completo per pizzerie, login con diversi ruoli: cameriere, cuoco, cassiere. Gestione ordinazioni, cassa, prenotazioni e tavoli.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/pomelia.gif" class="d-block w-100 mx-auto" alt="preview of hotel pomelia project">
-                        <div class="carousel-caption d-none d-md-block text-dark">
-                          <h5><a href="https://github.com/enricoberg/hotelpomelia" target="_blank">HOTEL POMELIA</a></h5>
-                          <p>Primo progetto START2IMPACT: Introduzione allo sviluppo. Creazione di un sito per un hotel ecosostenibile.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/adm.gif" class="d-block w-100 mx-auto" alt="preview of freelancer site project">
-                        <div class="carousel-caption d-none d-md-block text-dark">
-                          <h5><a href="" target="_blank">SITO FREELANCER</a></h5>
-                          <p>Sito vetrina realizzato per un consulente di progettazione meccanica e stampaggio a iniezione.</p>
-                        </div>
-                      </div>
-                    
-                    <div class="carousel-item">
-                      <img src="img/bbraun.gif" class="d-block w-100 mx-auto" alt="preview of product catalogue project">
-                      <div class="carousel-caption d-none d-md-block text-dark">
-                        <h5><a href="" target="_blank">CATALOGO B|BRAUN</a></h5>
-                        <p>Catalogo digitale di prodotti e servizi OEM per il settore medicale.</p>
-                      </div>
-                    </div>
+                     
                   </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -113,10 +104,13 @@
                   </div>
 
 
-
+                  <div class="downloadcontainer invisible" id="mobileLink">
+                    <a href="https://github.com/enricoberg" class="text-center text-light mb-3 mt-3">I MIEI PROGETTI</a>
+                  </div>
                   
 
                   <div class="downloadcontainer">
+                    
                     <form method="get" target="_blank" action="cv_Enrico_Bergamini.pdf">
                       <button class="btn" id="downloadbutton"><i class="fa fa-download"></i> Scarica il mio CV completo</button>
                     </form>
@@ -133,30 +127,14 @@
                Back-end Developer <br>
                Visit also my profile on: <br>
                <a href="https://linkedin.com/in/enrico-bergamini" target="_blank"  ><img src="img/linkedin.png" alt="linkedin logo" class="linkimg"></a>
-               <a href="https://github.com/enricoberg" target="_blank" ><img src="img/stack9.png" alt="github logo" class="linkimg"></a>
-               <a href="https://talent.start2impact.it/profile/Enrico-Bergamini-1fd556eb-9ae1-41d1-b110-4c7a35c97584" target="_blank" ><img src="img/s2i.png" alt="start2impact logo" class="linkimg"></a>
+               <a href="https://github.com/enricoberg" target="_blank" ><img src="img/stack10.webp" alt="github logo" class="linkimg"></a>
+               <a href="https://talent.start2impact.it/profile/Enrico-Bergamini-1fd556eb-9ae1-41d1-b110-4c7a35c97584" target="_blank" ><img src="img/s2i.webp" alt="start2impact logo" class="linkimg"></a>
             </div>
         </div>
     </div>
 
-    <script>
-        
-                    
 
-                    
-                    const imageElement = document.getElementById('stackpic');
-                    let currentIndex = 1;                
-                    const interval = setInterval(()=>{
-                        
-                        imageElement.src = `img/stack${currentIndex}.png`;
-                        currentIndex+=1; 
-                        if (currentIndex>10) currentIndex=1;
-                        
-                    }, 1200);
-
-                   
-
-    </script>
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/carouselLoader.js"></script>
 </body>
 </html>
