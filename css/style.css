@@ -57,7 +57,9 @@ body {
   width: 300px;
   margin-bottom: 85px;
 }
-
+.invisible{
+  display: none;
+}
 .footercontainer {
   line-height: 50px;
   padding: 25px;
@@ -113,3 +115,7 @@ h5 {
     font-size: 28px;
   }
 }/*# sourceMappingURL=style.css.map */
+
+#webgl_canvas{
+  max-width: 20vw;
+}

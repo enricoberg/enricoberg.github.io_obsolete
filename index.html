@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div id="webgl_canvas" class=""></div>
+    
     <div class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
             <div class="container">
                 <a href="#" class="navbar-brand">ENRICO BERGAMINI</a>
@@ -44,7 +46,8 @@
 
     <script>
         
-                    
+      
+
 
                     
       const imageElement = document.getElementById('stackpic');
@@ -133,8 +136,20 @@
         </div>
     </div>
 
-
+    <script>
+        document.querySelector("#section1").classList.add("invisible");
+        document.querySelector("#section2").classList.add("invisible");
+        document.querySelector("#section3").classList.add("invisible");
+        setTimeout(() => {
+            document.querySelector("#webgl_canvas").classList.add("invisible");
+            document.querySelector("#section1").classList.remove("invisible");
+            document.querySelector("#section2").classList.remove("invisible");
+            document.querySelector("#section3").classList.remove("invisible");
+        }, 2500);
+    </script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/carouselLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>
