@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="webgl_canvas" class=""></div>
+    <div id="webgl_canvas" class="invisible"></div>
+    
     
     <div class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
             <div class="container">
@@ -137,15 +138,27 @@
     </div>
 
     <script>
-        document.querySelector("#section1").classList.add("invisible");
-        document.querySelector("#section2").classList.add("invisible");
-        document.querySelector("#section3").classList.add("invisible");
-        setTimeout(() => {
-            document.querySelector("#webgl_canvas").classList.add("invisible");
-            document.querySelector("#section1").classList.remove("invisible");
-            document.querySelector("#section2").classList.remove("invisible");
-            document.querySelector("#section3").classList.remove("invisible");
-        }, 2500);
+        
+        if (screen.width>600){
+            document.querySelector("#webgl_canvas").classList.remove("invisible");
+            document.body.style.backgroundImage = "none";
+            document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.87)';
+            document.querySelector("#section1").classList.add("invisible");
+            document.querySelector(".footercontainer").classList.add("invisible");
+            document.querySelector("#section2").classList.add("invisible");
+            document.querySelector("#section3").classList.add("invisible");
+            setTimeout(() => {
+                document.querySelector("#webgl_canvas").classList.add("invisible");
+                document.querySelector("#section1").classList.remove("invisible");
+                document.querySelector("#section2").classList.remove("invisible");
+                document.querySelector("#section3").classList.remove("invisible");
+                document.querySelector(".footercontainer").classList.remove("invisible");
+                
+                document.body.style.backgroundImage ="url('../img/background4.jpg')";
+            }, 2000);
+
+        }
+        
     </script>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/carouselLoader.js"></script>
