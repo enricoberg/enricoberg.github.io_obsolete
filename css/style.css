@@ -72,12 +72,17 @@ body {
 }
 
 #biobox {
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
+  font-size: larger;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+#biobox a{
+  color:#ffa525;
+  text-decoration: none;
 }
 
 .carousel-item img {
@@ -116,3 +121,44 @@ h5 {
   }
 }/*# sourceMappingURL=style.css.map */
 
+.cardbtn{
+  background-color: #f5761b;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cardbtn:hover{
+  background-color: #ffa525;
+}
+.card-text{
+  margin-bottom: 75px;
+}
+.card-title{
+  color:#ffa525;
+}
+.stackcardcontainer{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 56px;
+  left: 0;
+}
+.stackcardcontainer img{
+  width: 25px;
+  margin-left:2px;
+  margin-right: 2px;
+}
+.card:hover{
+  box-shadow: 0 0 10px 5px #ffa525;
+}
+canvas {
+  width: 500px;
+  height: 500px;
+  display: block;
+}
+
+.animatedTyping{
+  font-family: 'Rubik', sans-serif;
+ 
+}

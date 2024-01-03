@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sito Personale di Enrico Bergamini. Curriculum e portfolio progetti di sviluppo web.">
     <title>Enrico Bergamini | My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="img/plane.webp?">
@@ -35,51 +38,40 @@
     <div class="container-fluid section s1 fullscreenheight"  id="section1">
         <div class="row">
             <div class="col s1col" >
-                <img src="" alt="" id="stackpic">
-                <h1 class="text-light" id="myStack">IL MIO STACK</h1>
+              <canvas id="myCanvas"></canvas>
+                <!-- <img src="" alt="" id="stackpic"> -->
+                <h1 class="text-light animatedTyping" id="myStack">IL MIO STACK</h1>
             </div>
             <div class="col s1col" >
                 <img src="img/EB_edited.webp" alt="profile picture" id="profilepic">
-                <h1 class="text-light">BACKEND DEVELOPER</h1>
+                <h1 class="text-light animatedTyping" >BACKEND DEVELOPER</h1>
             </div>
         </div>
     </div>
 
-    <script>
-        
-      
-
-
-                    
-      const imageElement = document.getElementById('stackpic');
-      let currentIndex = 1;                
-      const interval = setInterval(()=>{
-          
-          imageElement.src = `img/stack${currentIndex}.webp`;
-          currentIndex+=1; 
-          if (currentIndex>11) currentIndex=1;
-          
-      }, 1200);
-      
-
-     
-
-</script>
 
 
     <div class="container-fluid section s2 fullscreenheight" id="section2" >
         <div class="row  h-100" >
             <div class="col-11 col-md-8 mx-auto mx-auto text-light  " id="biobox">
                 <h1>Biografia</h1>
-                <p>Sono Enrico, un appassionato di tecnologia con l'obiettivo di diventare uno sviluppatore professionale. <br> La mia avventura nel mondo del codice è iniziata ai tempi del liceo, quando ho esplorato il linguaggio C e acquisito le basi della programmazione.
+                <p><br>Ciao! Sono Enrico, un appassionato di tecnologia con grandi sogni nel mondo dello sviluppo! 😊 <br>
+
+                  Sto seguendo un percorso per trasformare la mia carriera e diventare uno sviluppatore software. <br>
+                  Ho creato questo sito per mostrare i miei progetti, che puoi trovare anche sul mio profilo <a href="https://github.com/enricoberg" target="_blank">GitHub</a> e <a href="contacts.html">contattarmi</a> se sei interessato ad una collaborazione! <br>
                   
-                  <br>Successivamente, ho intrapreso un percorso diverso laureandomi in ingegneria meccanica nel 2019 presso l'Università di Modena. Durante la mia tesi di laurea, ho sviluppato un'applicazione per l'estrazione automatica di proprietà geometriche da modelli CAD tridimensionali. Questo progetto aveva l'obiettivo di automatizzare il processo di emissione di preventivi per il servizio di stampa 3D. Durante questa esperienza, ho appreso il linguaggio Python e ho iniziato ad appassionarmi alla programmazione.
-                    Nelle mie esperienze lavorative successive, ho scoperto l'efficacia di integrare script all'interno dei fogli di calcolo Excel. Ho sfruttato questa competenza per automatizzare e accelerare numerosi processi aziendali, tra cui l'inserimento di dati, la catalogazione di documenti e l'invio di email.
-                  <br>Nel 2022, la mia attuale azienda, parte di un gruppo multinazionale, ha deciso di creare un catalogo digitale dei propri prodotti per il mercato OEM. Questa iniziativa mirava a promuovere le nostre capacità di sviluppo prodotto presso altri siti del gruppo e ad ampliare le opportunità di business. Ho visto questa sfida come un'opportunità unica per immergermi nel mondo dello sviluppo web e mi sono volontariamente offerto di realizzare il progetto internamente, anziché affidarlo a una ditta esterna.
-                  <br>Per acquisire competenze in HTML, CSS e JavaScript, ho frequentato un corso su Udemy e ho studiato attraverso risorse online ampiamente disponibili. Successivamente, ho ampliato le mie conoscenze nel lato back-end, studiando le basi di Node.js e MySQL.
-                  <br>Desiderando creare un'applicazione full-stack, ho sviluppato una web application gestionale per pizzerie, in grado di gestire ordini, tavoli e prenotazioni.
-                  <br>Sono diventato membro di start2impact perché voglio continuare a migliorare le mie competenze e prepararmi per una carriera come sviluppatore back-end junior.
-                  <br> Voglio finalmente trasformare la mia passione per la programmazione da un hobby in una professione. A presto!
+                  Altro su di me: <br> 
+                  <ul>
+                    <li>Mi sono laureato in Ingegneria Meccanica (LM) nel 2019 presso l’Università di Modena.</li>
+                    <li>Adoro progettare in 3D e realizzare i miei modelli tramite la stampa 3D.</li>
+                    <li>Sono amante della tecnologia e dell’innovazione.</li>
+                    <li>La mia passione per il codice risale ai tempi del liceo, dove ho iniziato scrivendo le prime righe in C.</li>
+                  </ul> 
+                  <br>   
+                  <span>Attualmente sto seguendo il <a target="_blank" href="https://talent.start2impact.it/profile/Enrico-Bergamini-1fd556eb-9ae1-41d1-b110-4c7a35c97584">Master di Backend Development</a> di Start2Impact University per ampliare le mie conoscenze nel mondo web. 
+                    Spero di poter trasfomare a breve la mia passione per la programmazione in una professione. A presto! 👋🏼</span>            
+                  
+                  
                 </p>
             </div>
         </div>
@@ -87,10 +79,94 @@
     <div class="container-fluid section s3 fullscreenheight" id="section3" >
         <div class="row fullscreenheight">
             <div class="col-11 col-md-8 mx-auto mx-auto text-light " >
+                <div class="cardcontainer mx-auto d-flex justify-content-around flex-wrap">
+
+                    <div class="card text-center mb-3" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="img/pizza.webp" class="card-img-top projectpreview" alt="...">
+                          <h5 class="card-title">PIZZA MANAGER</h5>
+                          <p class="card-text">Gestionale completo per pizzerie, login con diversi ruoli: cameriere, cuoco, cassiere. Gestione ordinazioni, cassa, prenotazioni e tavoli.</p>
+                          <div class="stackcardcontainer container mx-auto html css javascript mysql node"></div>                         
+                          <a href="https://github.com/enricoberg/Pizza-manager" class="btn text-light cardbtn">Scopri di più</a>
+                        </div>
+                      </div> 
+                      <div class="card text-center mb-3" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="img/pomelia.webp" class="card-img-top projectpreview" alt="...">
+                          <h5 class="card-title">HOTEL POMELIA</h5>
+                          <p class="card-text">Primo progetto START2IMPACT: Introduzione allo sviluppo. Creazione di un sito per un hotel ecosostenibile.</p>
+                          <div class="stackcardcontainer container mx-auto  html css"></div>  
+                          <a href="https://github.com/enricoberg/hotelpomelia" class="btn text-light cardbtn">Scopri di più</a>
+                        </div>
+                      </div>  
+                      <div class="card text-center mb-3" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="img/adm.webp" class="card-img-top projectpreview" alt="...">
+                          <h5 class="card-title">SITO FREELANCER</h5>
+                          <p class="card-text">Sito vetrina realizzato per un consulente di progettazione meccanica e stampaggio a iniezione.</p>
+                          <div class="stackcardcontainer container mx-auto html css bootstrap javascript"></div>  
+                          <a href="#" class="btn text-light cardbtn">Scopri di più</a>
+                        </div>
+                      </div>  
+                      <div class="card text-center mb-3" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="img/bbraun.webp" class="card-img-top projectpreview" alt="...">
+                          <h5 class="card-title">CATALOGO B|BRAUN</h5>
+                          <p class="card-text">Catalogo digitale di prodotti e servizi OEM per il settore medicale</p>
+                          <div class="stackcardcontainer container mx-auto html css javascript"></div>  
+                          <a href="#" class="btn text-light cardbtn">Scopri di più</a>
+                        </div>
+                      </div>  
+                      <div class="card text-center mb-3" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="img/city.webp" class="card-img-top projectpreview" alt="...">
+                          <h5 class="card-title">CITY SCORE</h5>
+                          <p class="card-text">Progetto JavaScript Advanced START2IMPACT: motore di ricerca con chiamata API per visualizzare i punteggi delle città</p>
+                          <div class="stackcardcontainer container mx-auto html css javascript "></div>  
+                          <a href="https://github.com/enricoberg/city_score" class="btn text-light cardbtn">Scopri di più</a>
+                        </div>
+                      </div>    
+                      <div class="card text-center mb-3" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="img/json.webp" class="card-img-top projectpreview" alt="...">
+                          <h5 class="card-title">REST API - Flights</h5>
+                          <p class="card-text">Progetto PHP e MySQL START2IMPACT: API RESTful per recuperare dati da un database di voli, aeroporti, prenotazioni.</p>
+                          <div class="stackcardcontainer container mx-auto php mysql"></div>  
+                          <a href="https://github.com/enricoberg/flights_API" class="btn text-light cardbtn">Scopri di più</a>
+                        </div>
+                      </div>  
+                      <div class="card text-center mb-3" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="img/lottery.webp" class="card-img-top projectpreview" alt="...">
+                          <h5 class="card-title">Lotteria di Natale</h5>
+                          <p class="card-text">Sito realizzato per l'estrazione della lotteria di Natale aziendale.  </p>
+                          <div class="stackcardcontainer container mx-auto html css javascript"></div>  
+                          <a href="https://github.com/xmaslottery/xmaslottery.github.io" class="btn text-light cardbtn">Scopri di più</a>
+                        </div>
+                      </div>    
+                      <div class="card text-center mb-3" style="width: 18rem;">
+                        <div class="card-body">
+                          <img src="img/console.webp" class="card-img-top projectpreview" alt="...">
+                          <h5 class="card-title">Gestionale Riviste</h5>
+                          <p class="card-text">Progetto JAVA Basics START2IMPACT: una console app scritta in JAVA per gestire i dati di una testata online attiva che crea contenuti a tema scientifico e tecnologico. Funzionalità CRUD su riviste, abbonamenti, utenti. </p>
+                          <div class="stackcardcontainer container mx-auto java"></div>  
+                          <a href="https://github.com/enricoberg/Java-Magazines" class="btn text-light cardbtn">Scopri di più</a>
+                        </div>
+                      </div>                    
 
 
 
-                <div id="carouselExampleCaptions" class="carousel slide carousel-dark">
+
+
+
+
+
+
+                </div>
+                
+                  
+
+                <!-- <div id="carouselExampleCaptions" class="carousel slide carousel-dark">
                     <div class="carousel-indicators">
                      
                     </div>
@@ -105,7 +181,7 @@
                       <span class="carousel-control-next-icon" aria-hidden="true" ></span>
                       <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                  </div> -->
 
 
                   <div class="downloadcontainer invisible" id="mobileLink">
@@ -131,7 +207,7 @@
                Back-end Developer <br>
                Visit also my profile on: <br>
                <a href="https://linkedin.com/in/enrico-bergamini" target="_blank"  ><img src="img/linkedin.png" alt="linkedin logo" class="linkimg"></a>
-               <a href="https://github.com/enricoberg" target="_blank" ><img src="img/stack10.webp" alt="github logo" class="linkimg"></a>
+               <a href="https://github.com/enricoberg" target="_blank" ><img src="img/stack11.webp" alt="github logo" class="linkimg"></a>
                <a href="https://talent.start2impact.it/profile/Enrico-Bergamini-1fd556eb-9ae1-41d1-b110-4c7a35c97584" target="_blank" ><img src="img/s2i.webp" alt="start2impact logo" class="linkimg"></a>
             </div>
         </div>
@@ -139,30 +215,37 @@
 
     <script>
         document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.87)';
-        if (screen.width>600){
-            document.querySelector("#webgl_canvas").classList.remove("invisible");
-            document.body.style.backgroundImage = "none";
+        animateTyping();
+        function animateTyping(){
+          let elements=document.querySelectorAll(".animatedTyping");
+          for(let element=0;element<elements.length; element++ ){
             
-            document.querySelector("#section1").classList.add("invisible");
-            document.querySelector(".footercontainer").classList.add("invisible");
-            document.querySelector("#section2").classList.add("invisible");
-            document.querySelector("#section3").classList.add("invisible");
-            setTimeout(() => {
-                document.querySelector("#webgl_canvas").classList.add("invisible");
-                document.querySelector("#section1").classList.remove("invisible");
-                document.querySelector("#section2").classList.remove("invisible");
-                document.querySelector("#section3").classList.remove("invisible");
-                document.querySelector(".footercontainer").classList.remove("invisible");
+                let fulltext=elements[element].innerHTML;
                 
-                document.body.style.backgroundImage ="url('../img/background4.jpg')";
-            }, 2000);
-
+                elements[element].innerHTML="";
+                let i=0;
+                const myInterval=setInterval(()=>{
+                  elements[element].innerHTML += fulltext.charAt(i);
+                  i++;
+                  if(i>=fulltext.length) clearInterval(myInterval);
+                              
+                  
+                },150);
+              
+          }
+          
         }
+
+
+
         
     </script>
+
+    
+    <script src="js/stackloader.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/carouselLoader.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
-    <script src="js/animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script> 
+    <script src="js/cube.js"></script> 
+    
 </body>
 </html>

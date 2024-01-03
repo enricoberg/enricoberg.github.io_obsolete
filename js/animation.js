@@ -2,7 +2,7 @@ window.addEventListener(
     "load",
     function () {
       var r = 4;
-      var s_r = r / 20 + (Math.sin(0) * r) / 20;
+      var s_r = r / 20 + (Math.sin(0) * r) / 2
       var num_of_corners = 7;
       var obj_resolution = 360;
       var linewidth = 0.04;
