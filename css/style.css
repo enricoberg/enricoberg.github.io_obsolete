@@ -162,3 +162,6 @@ canvas {
   font-family: 'Rubik', sans-serif;
  
 }
+.hidden{
+  display: none;
+}

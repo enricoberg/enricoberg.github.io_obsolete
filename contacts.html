@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    <div class="container-fluid section  fullscreenheight"  >
+    <div class="container-fluid section  fullscreenheight " id="maincontactform" >
       <div class="row  h-100" >
           <div class="col-11 col-md-8 mx-auto mx-auto text-light  " >
               <form  novalidate id="form">
@@ -64,6 +64,21 @@
       </div>
   </div>
 
+  <div class="container-fluid section  fullscreenheight hidden" id="successform" >
+    <div class="row  h-100" >
+      <div class="col-11 col-md-8 mx-auto mx-auto text-light text-center " >
+        <h1 class="mt-3">Messaggio Inviato!</h3>
+          <h3>Grazie per avermi contattato, risponderò il prima possibile!</h3>
+          <img src="img/fox.png" alt="HappyFox" id="successfox">
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
     <div class="container-fluid footercontainer bg-dark text-light">
         <div class="row " >
             <div class="col mx-auto text-center ">
@@ -71,7 +86,7 @@
                Back-end Developer <br>
                Visit also my profile on: <br>
                <a href="https://linkedin.com/in/enrico-bergamini" target="_blank"  ><img src="img/linkedin.png" alt="linkedin logo" class="linkimg"></a>
-               <a href="https://github.com/enricoberg" target="_blank" ><img src="img/stack10.webp" alt="github logo" class="linkimg"></a>
+               <a href="https://github.com/enricoberg" target="_blank" ><img src="img/stack11.webp" alt="github logo" class="linkimg"></a>
                <a href="https://talent.start2impact.it/profile/Enrico-Bergamini-1fd556eb-9ae1-41d1-b110-4c7a35c97584" target="_blank" ><img src="img/s2i.webp" alt="start2impact logo" class="linkimg"></a>
             </div>
         </div>
@@ -113,8 +128,10 @@ if (allElementsHidden) {
   emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       
-      alert('Messaggio inviato con successo!');
-      location.reload();
+      document.querySelector("#maincontactform").classList.add("hidden");
+      document.querySelector("#successform").classList.remove("hidden");
+      document.documentElement.scrollTop = 0;
+      // location.reload();
     }, (err) => {
       
       alert("Errore nell'invio");
