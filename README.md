@@ -157,7 +157,7 @@ Enrico Bergamini -  enricobergamini@outlook.it
 
 
 
-<!--   ## Try it out
+   ## Try it out
 
   
 The project is online and you can try it now following the link:
@@ -165,7 +165,7 @@ The project is online and you can try it now following the link:
 
  [https://enricoberg.github.io/](https://enricoberg.github.io/)
 
-<p  align="right">(<a  href="#readme-top">back to top</a>)</p> -->
+<p  align="right">(<a  href="#readme-top">back to top</a>)</p> 
 
   
   
